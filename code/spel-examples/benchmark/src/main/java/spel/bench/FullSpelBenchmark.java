@@ -10,6 +10,12 @@ import org.springframework.expression.spel.SpelParserConfiguration;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
 
 /**
+ * Build project:
+ * <pre>mvn package</pre>
+ * <p/>
+ * Run benchmark:
+ * <pre>java -jar target\benchmarks.jar -f 1 -i 10 -wi 10 .*Full.*</pre>
+ *
  * @author Thomas Darimont
  */
 @State(Scope.Benchmark)
