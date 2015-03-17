@@ -21,11 +21,11 @@ import javax.script.*;
  * @author Thomas Darimont
  */
 @State(Scope.Benchmark)
-public class InstanceCreationExample {
+public class InstanceCreationBenchmark {
 
     private static final Object[] NO_ARGS = new Object[0];
     private static final SpelExpressionParser PARSER = new SpelExpressionParser();
-    private static final SpelExpressionParser COMPILING_PARSER = new SpelExpressionParser(new SpelParserConfiguration(SpelCompilerMode.IMMEDIATE, InstanceCreationExample.class.getClassLoader()));
+    private static final SpelExpressionParser COMPILING_PARSER = new SpelExpressionParser(new SpelParserConfiguration(SpelCompilerMode.IMMEDIATE, InstanceCreationBenchmark.class.getClassLoader()));
 
     private static final Class<?> TEST_OBJECT_CLASS = TestObjects.Foo.class;
     private static final String SPEL_EXPRESSION_STRING = "new " + TEST_OBJECT_CLASS.getName() + "()";
